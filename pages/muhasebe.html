@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σελίδα Λογιστικής</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <img src="/public/img/home.jpg" alt="background" class="background-img">
+    <h1>Σελίδα Λογιστικής</h1>
+    <p>Εδώ μπορεί να έρθει το περιεχόμενο των λογιστικών εργασιών.</p>
+
+    <form id="invoiceForm">
+        <label for="taxNumber">Αριθμός Φορολογικού:</label>
+        <input type="text" id="taxNumber" name="taxNumber" required>
+        <button type="button" onclick="searchCustomer()">Αναζήτηση Πελάτη</button>
+    </form>
+
+    <div id="customerInfo">
+        <!-- Εδώ θα εμφανίζονται οι πληροφορίες του πελάτη -->
+    </div>
+
+    <button onclick="createInvoice()">Έκδοση Τιμολογίου</button>
+
+    <!-- Κουμπί για Μετάβαση στην Κεντρική Σελίδα -->
+    <button onclick="goToHomePage()">Μετάβαση στην Κεντρική Σελίδα</button>
+
+    <script>
+        function searchCustomer() {
+            var taxNumber = document.getElementById("taxNumber").value;
+            // Εδώ μπορεί να πραγματοποιηθεί η αναζήτηση του πελάτη με βάση τον αριθμό φορολογικού
+            // Σε αυτό το σημείο μπορεί να γίνει επικοινωνία με τον διακομιστή ή να χρησιμοποιηθεί AJAX για να ληφθούν οι πληροφορίες του πελάτη
+            // Σε αυτό το παράδειγμα, απλώς εμφανίζουμε ένα μήνυμα ειδοποίησης
+            alert("Βρέθηκε πελάτης...");
+        }
+
+        function createInvoice() {
+            // Εδώ μπορεί να δημιουργηθεί το τιμολόγιο για τον επιλεγμένο πελάτη
+            // Μπορεί να ληφθούν οι πληροφορίες του επιλεγμένου πελάτη, όπως ο αριθμός φορολογικού και άλλα στοιχεία, για τη δημιουργία του τιμολογίου
+            // Σε αυτό το παράδειγμα, απλώς εμφανίζουμε ένα μήνυμα ειδοποίησης
+            alert("Ξεκινά η διαδικασία δημιουργίας τιμολογίου...");
+        }
+
+        function goToHomePage() {
+            window.location.href = '../main_page.html';
+        }
+    </script>
+</body>
+
+</html>

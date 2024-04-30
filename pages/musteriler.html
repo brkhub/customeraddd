@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγεγραμμένοι Πελάτες</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    
+    <img src="/public/img/home.jpg" alt="background" class="background-img">
+    <div class="customers">
+    <h1>Εγγεγραμμένοι Πελάτες</h1>
+    <button onclick="goToMainPage()">Μετάβαση στην Κεντρική Σελίδα</button>
+
+    <!-- Müşteri tablosu -->
+    <table id="customerTable">
+        <thead>
+            <tr>
+                <th>Όνομα</th>
+                <th>Επώνυμο</th>
+                <th>Email</th>
+                <th>Τηλέφωνο</th>
+                <th>ΑΦΜ</th>
+                <th>Αριθμός Ταυτότητας</th>
+                <th>IBAN</th>
+                <th>Μητρώνυμο</th>
+                <th>Πατρώνυμο</th>
+                <th>Ημερομηνία Γέννησης</th>
+                <th>Διεύθυνση</th>
+                <th>Νομός</th>
+                <th>Πόλη</th>
+                <th>Ταχυδρομικός Κώδικας</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Müşteri bilgileri burada dinamik olarak eklenecek -->
+        </tbody>
+    </table>
+
+    <!-- JavaScript dosyası -->
+    <script src="../public/js/script.js"></script>
+
+
+        
+
+        <script>
+            function goToMainPage() {
+                window.location.href = '../main_page.html';
+            }
+        </script>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσθήκη Πελάτη</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <button onclick="goToMainPage()">Αρχική Σελίδα</button>
+    <button id="openModalBtn">Εμφάνιση Λίστας Πελατών</button>
+    <img src="/public/img/customeradd.jpg" alt="background" class="background-img">
+    <div class="container">
+        <h1>Φόρμα Προσθήκης Πελάτη</h1>
+        <form id="customerForm">
+            <div class="form-group">
+                <label for="firstName">Όνομα:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Επώνυμο:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Τηλέφωνο:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="taxNumber">Αριθμός Φορολογικού:</label>
+                <input type="text" id="taxNumber" name="taxNumber" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="identityNumber">Αριθμός Ταυτότητας:</label>
+                <input type="text" id="identityNumber" name="identityNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="iban">IBAN:</label>
+                <input type="text" id="iban" name="iban" required>
+            </div>
+            <div class="form-group">
+                <label for="motherName">Όνομα Μητέρας:</label>
+                <input type="text" id="motherName" name="motherName" required>
+            </div>
+            <div class="form-group">
+                <label for="fatherName">Όνομα Πατέρα:</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Ημερομηνία Γέννησης:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Διεύθυνση:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+            <label for="prefecture">Νομός:</label>
+            <select id="prefecture" name="prefecture" required>
+                <option value="" disabled selected>Επιλέξτε Νομό</option>
+                <option value="rodopis">ΡΟΔΟΠΗ</option>
+                <option value="xanthis">ΞΑΝΘΗ</option>
+                <option value="evrou">ΕΒΡΟΥ</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label for="city">Πόλη:</label>
+            <select id="city" name="city" required>
+                <option value="" disabled selected>Επιλέξτε Πόλη</option>
+                <option value="komotini">ΚΟΜΟΤΗΝΗ</option>
+                <option value="xanthi">ΞΑΝΘΗ</option>
+                <option value="alexandroupoli">ΑΛΕΞΑΝΔΡΟΥΠΟΛΥ</option>
+                <option value="sapes">ΣΑΠΕΣ</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label for="postalCode">Ταχυδρομικός Κώδικας:</label>
+            <input type="text" id="postalCode" name="postalCode" placeholder="Ταχυδρομικός Κώδικας" required>
+            </div>
+            <button type="submit">Προσθήκη Πελάτη</button>
+        </form>
+    </div>
+    
+    
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="customerList">
+                <input type="text" id="searchTaxNumber" placeholder="Αναζήτηση με ΑΦΜ">
+                <button id="searchButton">Αναζήτηση</button>
+                <table id="customerTable">
+                    <thead>
+                        <tr>
+                            <th class="hidden">Όνομα</th>
+                            <th class="hidden">Επώνυμο</th>
+                            <th class="hidden">Email</th>
+                            <th class="hidden">Τηλέφωνο</th>
+                            <th class="hidden">Αριθμός Φορολογικού</th>
+                            <th class="hidden">Αριθμός Ταυτότητας</th>
+                            <th class="hidden">IBAN</th>
+                            <th class="hidden">Όνομα Μητέρας</th>
+                            <th class="hidden">Όνομα Πατέρα</th>
+                            <th class="hidden">Ημερομηνία Γέννησης</th>
+                            <th class="hidden">Διεύθυνση</th>
+                            <th class="hidden">Νομός</th>
+                            <th class="hidden">Πόλη</th>
+                            <th class="hidden">Ταχυδρομικός Κώδικας</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Εδώ θα εμφανίζονται οι πληροφορίες του πελάτη -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/script.js"></script>
+    
+    <script>
+        function goToMainPage() {
+            window.location.href = '../main_page.html';
+        }
+    </script>
+
+</body>
+
+</html>

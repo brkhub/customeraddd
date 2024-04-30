@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Modal */
+.modal {
+    display: none; /* Modal başlangıçta gizlenmiş olacak */
+    position: fixed; /* Modal sabit bir konumda olacak */
+    z-index: 1; /* Modal diğer elementlerin üstünde olacak */
+    left: 0;
+    top: 10px;
+    width: 100%; /* Modalın genişliği ekran genişliği kadar olacak */
+    height: 100%; /* Modalın yüksekliği ekran yüksekliği kadar olacak */
+    background-color: rgba(0,0,0,0.4); /* Modal arka planına hafif bir karartma efekti uygulanacak */
+}
+
+/* Modal İçeriği */
+.modal-content {
+    background-color: rgba(54, 54, 54); /* Modal arka plan rengi */
+    margin: 0 auto; /* Modalın dikeyde ve yatayda otomatik hizalama sağlayacak */
+    padding: 20px; /* Modal içeriği ile iç kenar arasında boşluk olacak */
+    border: 1px solid #888; /* Modalın kenarlığı */
+    border-radius: 10px; /* Modal köşeleri yuvarlatılacak */
+    max-width: 100%; /* Modalın maksimum genişliği ekran genişliği kadar olacak */
+    max-height: 100%; /* Modalın maksimum yüksekliği ekran yüksekliği kadar olacak */
+    overflow: auto; /* Modal içeriği ekran boyutunu aştığında kaydırma çubukları görünür olacak */
+    resize: both; /* Modalın yeniden boyutlandırılmasına izin verilecek */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#customerTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#customerTable th, #customerTable td {
+    color: white;
+    padding: 4px;
+    border: 1px solid #ddd;
+    overflow-wrap: break-word; /* Uzun kelimeleri alt satıra al */
+    word-wrap: break-word; /* Uzun kelimeleri alt satıra al */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#customerTable th {
+    height: 1px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 13px; /* Başlık metin boyutunu küçült */
+}
+
+#customerTable tbody tr {
+    background-color: rgba(54, 54, 54);
+}
+
+#customerTable tbody tr:hover {
+    background-color: rgb(87, 87, 87);
+}
+
+.hidden {
+    display: 1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px 20px;
+    background-color: rgba(54, 54, 54);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 1px 2px, rgba(255, 255, 255, 0.644) 0px 2px 4px, rgba(255, 255, 255, 0.322) 0px 4px 8px, rgba(224, 224, 224, 0.418) 0px 8px 16px, rgba(255, 255, 255, 0.404) 0px 16px 32px, rgba(255, 255, 255, 0.466) 0px 32px 64px;
+    /* Animasyon */
+    animation-name: slideInLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.container h1{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+}
+
+.form-group {
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    background-color: rgba(255, 255, 255, 0.411);
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-group input::placeholder{
+    color: #ffffff;
+}
+
+.form-group label{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/*Kayma efekti*/
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
